@@ -1,0 +1,46 @@
+
+
+.btnAdd
+{
+    width: 150px;
+    background-color:blueviolet;
+    color: white;
+    border-radius: 20px !important;
+}
+
+
+section
+{
+    line-height: 60px;
+}
+
+
+h3
+{
+   color: blueviolet;
+   text-shadow: 0 0 3px #FF0000;
+}
+
+th
+{
+    color: blueviolet;
+}
+
+tfoot
+{
+    font-size: 20px;
+    color:  blueviolet;;
+}
+
+td{
+    color: gray;
+    font-size: 18px;
+    font-weight:500
+}
+
+span
+{
+    color: black ;
+    font-size: 18px;
+    font-weight: 500;
+}

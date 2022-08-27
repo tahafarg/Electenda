@@ -1,0 +1,140 @@
+body, 
+html { 
+  /* you can add overflow:hidden here to make the scrollbar disappear */ 
+     
+    margin: 0; 
+    height: 100%; 
+    width: 100%; 
+    background-image: url('https://images6.alphacoders.com/377/377152.jpg'); 
+} 
+ 
+#button-back { 
+  padding: 15px; 
+  color: white; 
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, .5); 
+  font-size: 20pt; 
+} 
+ 
+.profile-body{ 
+margin: 25px; 
+} 
+ 
+.profile { 
+margin-top: -45px; 
+margin-left: auto; 
+margin-right: auto; 
+border-radius: 25px; 
+background-color: #ddd; 
+padding: 20px; 
+z-index: 0; 
+} 
+ 
+.socialmedia { 
+    text-align: center; 
+} 
+ 
+.photo { 
+    margin: 25px; 
+ 
+} 
+ 
+.image--cover { 
+    width: 170px; 
+    height: 170px; 
+    border: #fff 3px solid; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    object-position: center; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: auto; 
+    margin-top: -40px;     
+} 
+ 
+.username, 
+.profession, 
+.locationname, 
+.descricao { 
+    text-align: center; 
+    font-family: 'Roboto', sans-serif; 
+    padding: 0; 
+    margin: 1px; 
+} 
+ 
+.username { 
+  
+    font-size: 20pt; 
+    margin: 2px 
+} 
+ 
+.profession { 
+    font-size: 14pt; 
+} 
+ 
+.locationname { 
+    font-size: 14pt; 
+    margin: 2px 
+} 
+ 
+.descricao { 
+    border-top: #969696 solid 1px; 
+    padding: 10px; 
+    font-size: 11pt; 
+    margin: 5px; 
+} 
+ 
+.button-facebook, 
+.button-instagram, 
+.button-twitter, 
+.button-whatsapp { 
+    padding: 5px; 
+    font-size: 30pt; 
+} 
+.button-facebook { 
+    color: #3C5A99; 
+} 
+.button-instagram { 
+  color: #893dc2; 
+} 
+.button-twitter { 
+    color: #1DA1F2; 
+} 
+.button-whatsapp { 
+    color: #4AC959; 
+} 
+ 
+#rating-stars { 
+    margin: 4px; 
+} 
+ 
+#rating-stars .stars { 
+    display: inline-flex; 
+  } 
+  #rarate-input { 
+    pointer-events: none; 
+  } 
+  #rating-stars .rate-input { 
+    position: absolute; 
+    left: -9999px; 
+  } 
+  #rating-stars label { 
+    cursor: pointer; 
+    padding: 1px; 
+    font-size: 20pt; 
+  } 
+  #rating-stars .star-icon { 
+    color: orange; 
+  } 
+ 
+  #rating-stars .rate-input:checked ~ .star-label .star-icon { 
+    color: #999; 
+  } 
+  #rating-stars .stars:hover .star-label .star-icon { 
+    color: orange; 
+  } 
+  #rating-stars .rate-input:hover ~ .star-label .star-icon { 
+    color: #999; 
+  }
+
+

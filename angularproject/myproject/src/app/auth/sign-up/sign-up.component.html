@@ -1,0 +1,95 @@
+
+<section class=""> 
+  <div class="container" > 
+   
+    <div class="title">Registration</div>
+              <form class="" [formGroup]="form"> 
+                <div class="User_details"> 
+                  <div class="input_box"> 
+                      <label for="username" class="form-label details">FirstName</label> 
+                      <input type="text" class="form-control inputStyle" formControlName="FirstName"  aria-describedby="emailHelp"> 
+                      <div id="emailHelp" class="form-text"></div> 
+                    </div> 
+                    <div class="input_box"> 
+                      <label for="username" class="form-label ">LastName</label> 
+                      <input type="text" class="form-control inputStyle" formControlName="LastName"  aria-describedby="emailHelp"> 
+                      <div id="emailHelp" class="form-text"></div> 
+                    </div> 
+
+                    <div class="input_box">
+                      <label for="address" class="form-label">Address</label>
+                      <input type="text" class="form-control inputStyle" formControlName="Address"  aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+
+                  <div class="input_box"> 
+                    <label for="exampleInputEmail1" class="form-label">Email address</label> 
+                    <input type="email" class="form-control inputStyle" formControlName="Email" aria-describedby="emailHelp"> 
+                    <div id="emailHelp" class="form-text" ></div> 
+                  </div> 
+                  <div class="input_box"> 
+                    <label for="exampleInputPassword1" class="form-label">Password</label> 
+                    <input type="password" class="form-control inputStyle" formControlName="Password" > 
+                  </div> 
+                  <div class="input_box"> 
+                      <label for="exampleInputPassword1" class="form-label">Confirm Password</label> 
+                      <input type="password" class="form-control inputStyle" formControlName="ConfirmPassword" > 
+                    </div> 
+                  </div>
+                  <button id="button" style=" padding: 0.8rem; cursor:pointer; background-color:rgb(77, 77, 196) ; border : none ; border-radius:2rem ;color:black" type="submit"   [disabled]="form.invalid"  (click)="add()">Submit</button> 
+                </form> 
+          </div> 
+          <!-- <style> 
+            form { 
+             border: rgb(77, 77, 196) 0.2rem solid !important; 
+            } 
+            form #button  { 
+              background-color: #0d6efd!important; 
+              color:white !important; 
+            } 
+          </style>  -->
+
+ </section>
+
+ <!-- <div class="container">
+  <div class="title">Registration</div>
+  <form  class="w-75" [formGroup]="form">
+<div class="User_details">
+<div class="input_box">
+  <label for="username" class="form-label">FirstName</label> 
+  <input type="text" class="form-control inputStyle" formControlName="FirstName"  aria-describedby="emailHelp"> 
+  <div id="emailHelp" class="form-text"></div> 
+</div>
+
+<div class="input_box">
+<span class="details"> Last Name</span>
+<input type="text" placeholder="enter your Last Name " required>
+</div>
+
+<div class="input_box">
+<span class="details">Address  </span>
+<input type="text"  placeholder="enter your Address " required>
+</div>
+
+<div class="input_box">
+<span class="details"> Email</span>
+<input type="Email"  placeholder="enter your Email " required>
+</div>
+
+<div class="input_box">
+<span class="details">Password</span>
+<input type="password"  placeholder="enter your password " required>
+</div>
+
+<div class="input_box">
+<span class="details"> Confirm Password</span>
+<input type="password"  placeholder="Confirm your password " required>
+</div>
+
+</div>
+
+<div class="button">
+<input type="submit" value="Register">
+</div>
+  </form>
+ </div>                  -->

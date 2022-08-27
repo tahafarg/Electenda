@@ -1,0 +1,46 @@
+
+
+
+/* End Contact */ 
+ 
+  /* Start Footer */ 
+  footer { 
+    /*
+    padding-top: calc(var(--section-padding) / 2); 
+    padding-bottom: calc(var(--section-padding) / 2); 
+    background-size: cover; 
+    position: absolute; 
+    color: white; 
+    text-align: center; 
+    width: 100%; 
+   bottom: -40%; */
+
+   padding-top: calc(var(--section-padding) / 2); 
+    padding-bottom: calc(var(--section-padding) / 2); 
+    /* background-image: url("../images/subscribe.jpg"); */ 
+    background-size: cover; 
+    position: relative; 
+    color: white; 
+    text-align: center; 
+  
+  } 
+  
+  footer p:not(.copyright) { 
+    text-transform: uppercase; 
+    padding: 20px; 
+    border-bottom: 1px solid white; 
+    font-size: 22px; 
+    width: fit-content; 
+    margin: 20px auto; 
+  } 
+ 
+  footer .social-icons i { 
+    padding: 10px 15px; 
+  } 
+ 
+  footer .copyright { 
+    margin-top: 60px; 
+  } 
+   
+   
+  /* End Footer */

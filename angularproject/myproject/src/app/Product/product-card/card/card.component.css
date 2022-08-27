@@ -1,0 +1,22 @@
+
+
+a:hover {
+
+    color: white !important;
+    background-color: black !important;
+}
+
+.btnStyle
+{
+    color: white;
+    background-color:gray;
+    width: 100px;
+}
+
+
+p{
+    color: gray;
+    font-weight: 500;
+}
+
+

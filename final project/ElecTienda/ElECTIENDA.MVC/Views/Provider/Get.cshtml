@@ -1,0 +1,65 @@
+﻿
+@model IPagedList<ProviderViewModel>
+
+
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+
+
+<br/>
+<br/>
+
+
+<table class="table">
+    
+    <thead> 
+          <th>Profile</th>
+          <th>Provider Name</th>     
+         <th> </th>
+          <th> </th>
+    </thead>
+
+   <tbody>
+      
+@foreach(ProviderViewModel p in Model )
+{
+    <tr> 
+  <td><img src="@p.Img"  alt="@p.Name" height="25%" width="25%"></td>
+  <td>@p.Name</td>
+   <td>  <button> <a asp-action="Remove" asp-controller="Provider" asp-route-ID="@p.ID">Delete</a> </button> </td>
+   
+   <td>  <button> <a asp-action="AdminSearch" asp-controller="Shop" asp-route-ProviderId="@p.ID">Shops</a> </button> </td>
+   </tr>
+}
+
+ </tbody>
+</table>
+
+<br /> 
+<br /> 
+
+
+ <div class="" style="margin-left:30%">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Search", new { pageIndex = page }),
+        new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+        })
+    </div>
+
+
+
+     <script>
+        $(document).ready(function() {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+
+
+
+

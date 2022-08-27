@@ -1,0 +1,17 @@
+﻿
+@using ELECTIENDA.ViewModel
+
+@model PaginingViewModel<List<OrderViewModel>>
+
+@{
+    Layout = "_Layout";
+}
+
+@foreach(var o in Model.Data)
+{
+ <p> o.OrderDate </p>
+  <p>o.ShippingDate </p> 
+ <p> o.OrderDetailes </p>
+ <p> o.Amount </p> 
+  <p>  o.Statue </p>
+}

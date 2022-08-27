@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+    <div class="mb-3">
+      <label for="UserName" class="form-label">User Name</label>
+      <input type="text" class="form-control" formControlName="UserName" >
+    </div>
+    <div class="mb-3">
+      <label for="Password" class="form-label">Password</label>
+      <input type="password" class="form-control" formControlName="Password">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" [disabled] = 'form.invalid' (click)="add()" class="btn btn-primary">Submit</button>
+  </form>

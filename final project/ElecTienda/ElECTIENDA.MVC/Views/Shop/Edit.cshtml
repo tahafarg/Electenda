@@ -1,0 +1,39 @@
+﻿@using ELECTIENDA.ViewModel
+@model ShopEditViewModel 
+ 
+@{
+    Layout = "_LayoutProviderPanelComponents";
+}
+<form  style="width:35rem ; margin-left:10rem;margin-top:5rem; background-color:cadetblue; border-radius:4rem 0 4rem 0rem; border:0.1rem solid blue; padding:3rem" method="post" asp-action="Edit" asp-controller="shop" enctype="multipart/form-data"> 
+  
+    <div>
+        <input asp-for="Id" type="hidden" hidden/>
+    </div>
+    <div>
+     <label asp-for="ProviderId" hidden></label>
+     <input asp-for="ProviderId" hidden/>
+ 
+ </div>
+    
+    <div> 
+        <label asp-for="Name"></label> 
+        <input asp-for="Name" /> 
+    </div> 
+    <div>
+        <label  asp-for="Address"></label> 
+        <input style="margin-left:-1rem; margin-top:1rem;"  asp-for="Address" /> 
+    </div> 
+    <div> 
+        <label asp-for="ImgSrc"></label> 
+        <input asp-for="ImgSrc" type="file"/> 
+<span asp-validation-for="ImgSrc" style="color:red"></span>
+    </div> 
+  <div> 
+        <input style="margin-left:15rem; margin-top:3rem" type="submit" class=" btn btn-primary" value="Edit" /> 
+    </div> 
+ 
+</form>
+
+
+
+

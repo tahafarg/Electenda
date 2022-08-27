@@ -1,0 +1,179 @@
+﻿
+@using ELECTIENDA.ViewModel
+@model ProviderAddViewModel;
+
+<html> 
+<head> 
+    <title>Sign Up</title> 
+ 
+</head> 
+<body> 
+    <div class="container"> 
+        <div class="row"> 
+            <div style="text-align:center; margin-left:-18rem; margin-top:2rem; margin-right:3rem;  padding-left:30rem; width:100rem" class="col-4"> 
+                <h1>Sign Up</h1> <br /><br /> 
+                <form style="border: 0.2rem solid blue ; padding:2rem;  border-radius:5rem 0 5rem 0 ;margin-left:10rem;  width:30rem" asp-action="SignUp" asp-controller="Provider" method="post" enctype="multipart/form-data"> 
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div> 
+                    <div class="form-group"> 
+                        <label asp-for="FirstName"></label> 
+                        <input asp-for="FirstName" class="form-control" /> 
+                        <span asp-validation-for="FirstName" class="text-danger"></span> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label asp-for="LastName"></label> 
+                        <input asp-for="LastName" class="form-control" /> 
+                        <span asp-validation-for="LastName"></span> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label asp-for="Email"></label> 
+                        <input asp-for="Email" class="form-control" /> 
+                        <span asp-validation-for="Email"></span> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label asp-for="Password"></label> 
+                        <input asp-for="Password" class="form-control" /> 
+                        <span asp-validation-for="Password"></span> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label asp-for="ConfirmPassword"></label> 
+                        <input asp-for="ConfirmPassword" class="form-control" /> 
+                        <span asp-validation-for="ConfirmPassword"></span> 
+                    </div> 
+                    <div> 
+                                               <label asp-for="MembershipID">MemberShip </label> 
+                                               <select style="margin-top:2rem;"  asp-for="MembershipID" asp-items="ViewBag.Memberships"> 
+                                                   <option selected>Choose a Membership</option> 
+                                               </select> 
+                                               <span asp-validation-for="MembershipID" class="text-danger"></span> 
+                                           </div>
+                     <div class="form-group"> 
+                        <label style="margin-top:1rem;" asp-for="LicenseImg"></label> 
+                        <input style="margin-top:1rem;"  asp-for="LicenseImg" type="file" class="form-control" /> 
+                        
+                    </div> 
+
+                    
+                     <div class="form-group">
+                        <label style="margin-top:1rem;" asp-for="Image"></label>
+                        <input style="margin-top:1rem;" asp-for="Image" type="file" class="form-control" />
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        
+                        <a class="btn btn-primary" style="margin-top:1rem;"  asp-action="SignIn" asp-controller="User">SignIn</a>
+
+                    </div>
+                     
+                    <div class="form-group"> 
+                        <input type="submit" value="Register" style="margin-top:1rem;" class="btn btn-primary" /> 
+                    </div> 
+                </form> 
+                
+            </div> 
+
+           @* <div class="col-8"> 
+                <img src="~/Content/Images/signup.png" /> 
+            </div> *@
+
+        </div> 
+    </div> 
+      <marquee bgcolor="white">
+         <div class="options">OPTIONS :) </div>
+    <div style="display:flex;">
+    <div id="card"> 
+        <img src="/Content/Images/OIP.jpg" style=";width:18rem " /> 
+        <h1 class="h1top"> Golden  </h1>
+        <p>120 Days </p>
+        <p>150 $ </p>
+    </div>
+        <div id="card" style="background-color:silver"> 
+        <img src="/Content/Images/Silver-Membership-300x300.png" style="width:18rem; background-color:white;" /> 
+        <h1 class="h1top"> Silver  </h1>
+        <p>90 Days </p>
+        <p>100 $ </p>
+    </div>
+        <div id="card" style="background-color:#c28141" > 
+        <img src="/Content/Images/R (1).png" style="width:18rem;  background-color:white " /> 
+        <h1 class="h1top"> Bronze  </h1>
+        <p> 30 Days </p>
+        <p> 50$ </p>
+    </div>
+          <div id="card" style="background-color:#3e547a"> 
+        <img src="/Content/Images/depositphotos_80514162-stock-illustration-gold-free-membership-badge.jpg" style="width:18rem;  background-color:white" /> 
+        <h1  class="h1top"> Free  </h1>
+        <p >10 Days </p>
+        <p >Free  </p>
+    </div>
+    </div>
+    <style>
+        .options{
+            width:80rem;
+            height:5rem;
+            background-color:#a44200;
+            margin-left:1.5rem;
+            text-align:center;
+            padding-top:1rem;
+            color:white;
+            font-size:2rem;
+            border-radius:5rem 0 5rem 0;
+            margin-top:2rem;
+
+
+        }
+
+
+        #card{
+            margin-left:2rem;
+            width:18.5rem;
+            height:35rem;
+            margin-top:5rem;    
+            background-color:gold;
+            border:black 0.1rem solid;
+        transition: 0.5s ease;
+
+        }
+        #card:hover{
+
+      
+              transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+     
+        /*box-shadow:black 0.5rem 0.5rem 1rem;*/
+ 
+        }
+        .h1top {
+            font-size:3rem;
+
+            text-align:center;
+            padding-top:5rem;
+
+        }
+        #card p {
+            font-size:1.5rem;
+            text-align:center;
+            margin-top:1rem;    
+                 
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body> 
+</html>

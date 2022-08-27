@@ -1,0 +1,82 @@
+﻿@using ELECTIENDA.ViewModel
+@model UserEditViewModel
+
+
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr2222.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          asp-fallback-href="~/Content/lib/twitter-bootstrap/css/bootstrap.css"
+          asp-fallback-test-class="sr-only"
+          asp-fallback-test-property="position"
+          asp-fallback-test-value="absolute" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h1>Sign Up</h1> <br /><br />
+                <form asp-action="SignUp" asp-controller="User" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="FirstName"></label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LastName"></label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Address"></label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    @*  <div class="form-group">
+                        <label asp-for="PhoneNumber"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>*@
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword"></label>
+                        <input asp-for="ConfirmPassword" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+@*
+      <div class="form-group">
+        <label asp-for="Image"></label>
+        <div class="custom-file">
+            <input asp-for="Image" class="custom-file-input" id="customFile">
+            
+        </div>
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+          *@   
+           <div class="form-group">
+               <label>img</label>
+                       <input type="text" />
+                    </div>
+          
+          <div class="form-group">
+                        <input type="submit" value="Register" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
+

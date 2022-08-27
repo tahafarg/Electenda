@@ -1,0 +1,110 @@
+﻿
+@{
+    Layout = null;
+}
+@{
+    
+            var clamisidentity = (System.Security.Claims.ClaimsIdentity)this.User.Identity;
+            var claim = clamisidentity.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier);
+            var userid = claim.Value;
+}
+ @if(User.HasClaim(c => c.Value=="Admin")){
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <link rel="stylesheet"  href="~/Content/CSS/dashA.css"> 
+    <link rel="stylesheet" href="~/Content/CSS/useregest.css"> 
+    <link rel="stylesheet" href="~/Content/lib/font-awesome/css/all.min.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> 
+ 
+</head>  
+ 
+<body> 
+    <div id="viewport"> 
+        <div id="sidebar"> 
+            <header class="adminhead" style = "background-color: #1985e1;"> 
+                <a href="/panel">Admin Panel </a> 
+            </header> 
+            <div class="list"> 
+                <ul class=""> 
+                    <li class="licolor"> 
+                        <a asp-action = "Search" asp-controller = "User"> 
+                            <i class="fa fa-solid fa-users"></i>Registered Users</a> 
+                    </li> 
+                   <li class="licolor"><a asp-action = "Search" asp-controller = "Provider" ><i class="fa fa-duotone fa-user" class="linkadmin"></i>Providers</a></li> 
+                    <li class="licolor"><a asp-action = "AdminSearch" asp-controller = "Product" ><i class="fa-solid fa fa-bag-shopping" class="linkadmin"></i>Products</a></li> 
+                    <li class="licolor"><a asp-action = "ProviderSearch" asp-controller = "Order" ><i class="fa-solid fa fa-bag-shopping" class="linkadmin"></i>Orders</a></li> 
+                    <li class="licolor"><a asp-action = "AdminSearch" asp-controller = "Category" ><i class="fa-solid fa fa-bag-shopping" class="linkadmin"></i>Categories</a></li> 
+                   @* <li class="licolor"><a asp-action = "Get" asp-controller = "Brand" ><i class="fa-solid fa fa-bag-shopping" class="linkadmin"></i>Brands</a></li> *@
+                    <li class="licolor"><a asp-action = "Get" asp-controller = "Rate" > <i class="fa fa-solid fa-star " class="linkadmin"></i>Reviews</a></li> 
+                    <li class="licolor"><a asp-action = "Get" asp-controller = "Services" ><i class="fa-solid fa fa-bag-shopping" class="linkadmin"></i>Services</a></li> 
+                    <li class="licolor"><a asp-action = "AdminSearch" asp-controller = "Shop"><i class="fa fa-solid fa-shop"></i>Shops</a></li>
+                    <li class="licolor"><a asp-action = "AdminGet" asp-controller = "MemberShip"><i class="fa fa-solid fa-shop"></i>MemberShip</a></li>
+
+                </ul> 
+           </div> 
+        </div> 
+            </div> 
+         <div class="navcont">
+         <ul class="navul">
+             <li class="navli">
+                 <span>@User.Identity.Name</span>
+                </li>
+             <li class="navli">
+                 <a asp-action="SignOut" asp-controller="User">LogOut</a>
+                </li>
+         </ul>
+     </div>
+ 
+
+     <div class="card-contain"> 
+     <div class="card1"> 
+     <div class="one"> 
+     <i class="fa fa-solid fa-users icons"></i> 
+         <p class="num1">@ViewBag.userCount</p> 
+         <p class="p1">Registered_users</p> 
+ 
+     </div> 
+     <div class="two"> 
+     <i class="fa-solid fa fa-bag-shopping icons"></i> 
+         <p class="num2">@ViewBag.prodCount</p> 
+         <p class="p2">Products</p> 
+ 
+     </div> 
+     <div class="three"> 
+     <i class="fa-solid fa fa-clone icons"></i> 
+         <p class="num3">@ViewBag.catCount</p> 
+        <p class="p3"> Categories</p> 
+     </div> 
+     </div> 
+<div class="card2"> 
+     <div class="four"> 
+     <i class="fa-solid fa fa-globe icons"></i> 
+         <p class="num4">@ViewBag.brandCount</p> 
+      <p class="p4">Brands</p> 
+ 
+     </div> 
+     <div class="five"> 
+     <i class="fa fa-duotone fa-user icons"></i> 
+         <p class="num5">@ViewBag.provCount</p> 
+         <p class="p5">Providers</p> 
+ 
+     </div> 
+     <div class="six"> 
+     <i class="fa fa-solid fa-star icons"></i> 
+         <p class="num6"></p> 
+         <p class="p6">Reviews</p> 
+ 
+     </div> 
+     
+     </div> 
+     </div> 
+</body> 
+ 
+</html>
+}

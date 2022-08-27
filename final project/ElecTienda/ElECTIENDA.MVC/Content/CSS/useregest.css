@@ -1,0 +1,151 @@
+﻿namespace ElECTIENDA.MVC.Content
+
+#table {
+    position: absolute;
+    width: 63%;
+    bottom: 9%;
+    left: 28%;
+    height: 70%;
+}
+
+#addcat {
+    position: absolute;
+    bottom: 4%;
+    left: 28%;
+    width: 7%;
+    height: 5%;
+    border-radius: 6px;
+    background-color: #9e9e9eb3;
+}
+
+    #addcat a {
+        color: black;
+        text-decoration: none;
+    }
+
+* {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+
+/* Toggle Styles */
+
+#viewport {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
+
+.licolor a {
+    text-decoration: none;
+    color: white;
+}
+
+.navli a {
+    color: #0285f5 !important;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #90aebb;
+}
+
+.list {
+    margin-top: 50px;
+}
+
+.licolor {
+    margin-top: 15px;
+    background-color: #4a5c64;
+}
+
+.navli {
+    background-color: transparent !important;
+}
+
+.navcont {
+    background-color: #eee;
+    height: 55px;
+}
+
+i {
+    margin-right: 7px;
+}
+
+ul {
+    line-height: 3.5;
+    margin-left: -13% !important;
+}
+
+#content {
+    width: 100%;
+    position: relative;
+    margin-right: 0;
+}
+
+
+/* Sidebar Styles */
+
+#sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #37474F;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    text-align: center;
+}
+
+    #sidebar header {
+        background-color: #263238;
+        font-size: 20px;
+        line-height: 52px;
+        text-align: center;
+    }
+
+        #sidebar header a {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+            #sidebar header a:hover {
+                color: #fff;
+            }
+
+    #sidebar .nav a {
+        background: none;
+        border-bottom: 1px solid #455A64;
+        color: #CFD8DC;
+        font-size: 14px;
+        padding: 16px 24px;
+    }
+
+        #sidebar .nav a:hover {
+            background: none;
+            color: #ECEFF1;
+        }
+
+        #sidebar .nav a i {
+            margin-right: 16px;
+        }

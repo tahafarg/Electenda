@@ -1,0 +1,72 @@
+﻿@model IPagedList<RateViewModel>
+
+     
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+<br/>
+<br/>
+
+ <table class="table">
+  <thead>
+    <tr>
+@*      <th scope="col">#</th>
+*@      <th scope="col">rate</th>
+      <th scope="col">review</th>
+      <th scope="col">User Name</th>
+       <th scope="col">product Name</th>
+       <th scope="col">Status</th>
+       <th scope="col"></th>
+ <th scope="col"></th>      
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(RateViewModel cat in Model)
+     { <tr>
+@*      <th scope="row">@cat.ID</th>
+*@      
+      <td>@cat.Rating</td>
+      <td>@cat.Review</td>
+      @foreach(var str in cat.ProductName)
+                        {
+                            <td> str</td>
+                        }
+    
+
+      @foreach(var str in cat.UserName)
+                        {
+                            <td> str</td>
+                        }
+      <td> @cat.Statues</td>
+       <td> <button> <a asp-action="RateAccepted" asp-controller="Rate" asp-route-ID="@cat.ID">Accepted</a> </button></td>
+   <td> <button><a asp-action="RateRejected" asp-controller="Rate"  asp-route-ID="@cat.ID">Cancel</a> </button></td>
+
+    </tr>
+    }
+ </tbody>
+</table>
+   
+<br /> 
+<br /> 
+
+<div cite="" style="margin-left:30%">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Search", new { pageIndex = page }),
+        new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+        })
+    </div>
+
+
+
+     <script>
+        $(document).ready(function() {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+
+

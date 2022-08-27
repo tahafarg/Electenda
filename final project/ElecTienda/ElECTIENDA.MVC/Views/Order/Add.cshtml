@@ -1,0 +1,41 @@
+﻿
+@model OrderAddViewModel
+
+
+<form  method="post" asp-action="Add2" asp-controller="Order" >
+
+    <div class="form-group">
+        <label asp-for="UserID"> </label>
+        <input asp-for="UserID"  />
+        <span asp-validation-for="UserID"> </span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="OrderDate"> </label>
+        <input asp-for="OrderDate"/> 
+        <span asp-validation-for="OrderDate"> </span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShippingDate"> </label>
+        <input asp-for="ShippingDate"/>
+        <span asp-validation-for="ShippingDate"> </span>
+    </div>
+
+    @*<div class="form-group">
+        <label asp-for="Amount"> </label>
+        <input asp-for="Amount"/>
+        <span asp-validation-for="Amount"> </span>
+    </div>*@
+
+    <div class="form-group">
+        <label asp-for="Details"> </label>
+        <input asp-for="Details"/>
+        <span asp-validation-for="Details"> </span>
+    </div>
+
+    
+    <button type="submit" class="form-group" > Add </button>
+
+
+</form>

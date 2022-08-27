@@ -1,0 +1,67 @@
+﻿
+@model IPagedList<ProductViewModel> 
+ 
+ 
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+
+
+ <br/>
+ <br/>
+ 
+<table class="table"> 
+    <thead> 
+        <tr> 
+            <th scope="col">#</th> 
+            <th scope="col">Name</th> 
+            <th scope="col">price</th> 
+<th scope="col">Image</th>
+   
+            <th scope="col">Status </th> 
+            <th scope="col"> </th> 
+            <th scope="col"> </th> 
+ 
+        </tr> 
+    </thead> 
+    <tbody> 
+        @foreach (var product in Model) 
+         { 
+        <tr> 
+            <th scope="row">@product.ID</th> 
+            <td>@product.Name</td> 
+            <td>@product.price</td> 
+       <td><img src="@product.Imgs.FirstOrDefault() " height="25%" width="25%"/></td>
+            <td>@product.status</td> 
+            <td><button class="btn btn-dark"><a asp-action="ProductAccepted" asp-controller="Product" asp-route-id="@product.ID"> Accepted </a></button> </td> 
+            <td><button class="btn btn-dark"><a asp-action="ProductRejected" asp-controller="Product" asp-route-id="@product.ID"> Rejected </a></button> </td> 
+
+        </tr> 
+ 
+         } 
+ 
+ 
+    </tbody> 
+</table> 
+<br /> 
+<br /> 
+  <div style="margin-left:30%">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Search", new { pageIndex = page }),
+        new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+        })
+    </div>
+
+
+
+     <script>
+        $(document).ready(function() {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+ 

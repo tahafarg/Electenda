@@ -1,0 +1,75 @@
+﻿
+@model IPagedList<ProductViewModel> 
+@using System.Linq;
+ 
+@{
+    Layout = "_LayoutProviderPanelComponents";
+}
+
+ <br/>
+ <br/>
+ <a class="btn btn-primary" style="margin-left:-5rem !important;" asp-action ="Add" asp-controller="Product"  role="button">Add</a> 
+
+ 
+<table  style="margin:2rem -5rem; text-align:center" class="table"> 
+    <thead  style="text-align:center"> 
+        <tr> 
+            <th style="color:mediumblue" scope="col">#</th> 
+            <th style="color:brown" scope="col">Name</th> 
+            <th style="color:black" scope="col">price</th> 
+<th style="color:dodgerblue" scope="col">Image </th> 
+            <th style="color:midnightblue" scope="col">Status </th> 
+            
+<th scope="col"> </th> 
+            
+<th scope="col"> </th> 
+ 
+        </tr> 
+    </thead> 
+    <tbody> 
+        @foreach (var product in Model) 
+         { 
+        <tr> 
+            <th scope="row">@product.ID</th> 
+            <td>@product.Name</td> 
+            <td>@product.price</td> 
+       <td>
+@*@foreach (var item in @product.Imgs)
+{
+    <img src="~@item"/>
+}*@
+<img src="@product.Imgs?.FirstOrDefault()" style="width:25%; hight:25%"/>
+    </td>
+               
+ <td>@product.status</td> 
+             <td><button style="background-color:darkgoldenrod"  class="btn btn"> <a asp-action="Edit" asp-controller="Product" asp-route-id="@product.ID"> Edit</a></button> </td> 
+            <td><button style="background-color:darkred"  class="btn btn-dark"><a asp-action="ProviderRemove" asp-controller="Product" asp-route-id="@product.ID"> Delete</a></button> </td> 
+ 
+        </tr> 
+ 
+         } 
+ 
+ 
+    </tbody> 
+</table> 
+<br /> 
+<br /> 
+  <div style="margin-left:30%">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Search", new { pageIndex = page }),
+        new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+        })
+    </div>
+
+
+
+     <script>
+        $(document).ready(function() {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+ 

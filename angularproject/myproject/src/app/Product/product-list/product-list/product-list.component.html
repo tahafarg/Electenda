@@ -1,0 +1,16 @@
+
+<div style=" line-height: 50px;">
+<div class="row container justify-content-between " >
+    <app-card *ngFor="let item of products  | paginate : { itemsPerPage: pageSize, currentPage: pageIndex, totalItems: count}" [prod]="item" class="card col-3 card-style ">
+     
+    </app-card>
+</div>
+</div>
+
+
+
+<div class="d-flex justify-content-center" id="pagination"> 
+    <pagination-controls previousLabel="Prev" nextLabel="Next" 
+        (pageChange)="onTableDataChange($event)"> 
+    </pagination-controls> 
+</div>

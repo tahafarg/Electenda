@@ -1,0 +1,68 @@
+﻿@using ELECTIENDA.ViewModel
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+
+
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+
+
+@model IPagedList<OrderViewModel>
+
+
+   
+<br />
+<br />
+<div class=" row"> 
+<table class="table">
+    <thead> 
+        <th>Order Date</th>
+        <th> Shipping Date</th>
+      @*  <th>Amount</th>*@
+        <td>Statue</td>
+        <td></td>
+        <th></th>
+        <th></th>
+    </thead>
+   <tbody>
+      
+@foreach(OrderViewModel order in Model )
+{
+   <tr> 
+  <td>@order.OrderDate</td>
+  <td>@order.ShippingDate</td>
+@*   <td>@order.Amount</td>*@
+    <td>@order.Statue</td>
+  @* <td> <button> <a asp-action="Details" asp-controller="Order" asp-route-ID="@order.ID">Details</a> </button></td>*@
+   <td> <button> <a asp-action="Done" asp-controller="Order" asp-route-ID="@order.ID">Done</a> </button></td>
+   <td> <button><a asp-action="Cancele" asp-controller="Order"  asp-route-ID="@order.ID">Cancel</a> </button></td>
+  </tr>
+}
+
+ </tbody>
+</table>
+
+<br /> 
+<br /> 
+
+ <div class="" style="margin-left:30%">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Search", new { pageIndex = page }),
+        new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+        })
+    </div>
+
+
+
+     <script>
+        $(document).ready(function() {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+

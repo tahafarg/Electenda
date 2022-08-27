@@ -1,0 +1,75 @@
+﻿@model IPagedList<ServicesViewModel>
+
+
+@{
+    Layout = "_LayoutProviderPanelComponents";
+}
+
+<br />
+<br />
+  <a class="btn btn-primary" asp-action ="Add" asp-controller="Services" role="button">Add</a> 
+  <table class="table">
+  <thead>
+    <tr>
+@*      <th scope="col">#</th>
+*@      <th scope="col" style="color:darkblue">Name</th>
+     <th scope="col" style="color:brown">Descrption</th>
+     <th scope="col" style="color:dodgerblue">Is Active</th>
+      <th scope="col" style="color:midnightblue">StartDate</th>
+      <th scope="col" style="color:midnightblue">EndDate</th>
+ 
+      <th scope="col" style="color:darkgoldenrod">Categoryname</th>
+      <th scope="col" style="color:darkgoldenrod">Providername</th>
+@*      <th scope="col"></th>
+*@      <th scope="col">Edit</th>
+      <th scope="col" style="color:red">Delete</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(ServicesViewModel s in Model)
+     { <tr>
+@*      <th scope="row">@s.ID</th>
+*@      <td>@s.Name</td>
+      <td>@s.Description</td>
+      <td>@s.IsActive</td>
+      <td>@s.StartDate</td>
+      <td>@s.EndDate</td>
+      @*<td>@s.Src</td>*@
+     
+      <td>@s.CategoryName</td>
+      <td>@s.ProdviderName</td>
+      
+@*             <td><button class="btn btn-info"> <a asp-action="Details" asp-controller="services" asp-route-id="@s.ID"> Details</a>  </button> </td> 
+*@            <td><button class="btn btn-warning"><a asp-action="Edit" asp-controller="services" asp-route-id="@s.ID"> Edit</a></button></td>
+            <td><button class="btn btn-dark"><a asp-action="Remove" asp-controller="services" asp-route-id="@s.ID"> Delete</a></button></td> 
+             
+ 
+    </tr>
+    }
+ </tbody>
+</table>
+
+<br /> 
+<br /> 
+
+       <div class="" style="margin-left:30%">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Search", new { pageIndex = page }),
+        new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+        })
+    </div>
+
+
+
+     <script>
+        $(document).ready(function() {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+
+       

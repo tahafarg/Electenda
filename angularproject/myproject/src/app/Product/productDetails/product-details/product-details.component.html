@@ -1,0 +1,98 @@
+<!-- <section class="">
+    <div class="container">
+        <br>
+        <br>
+        <div class="row justify-content-end">
+            <div class="col-2"></div>
+            <div class="col-5">
+                <img src="https://localhost:50001/{{prod.imgs[0]}}" alt="{{prod.name}}">
+            </div>
+            <div class="col-5">
+                <h4>{{prod.name}}</h4>                                  
+                <div class="row justify-content-between">
+                    <h6 class="col-5">VENDOR</h6>
+                    <div class="col-5">{{prod.providerName}}</div>
+                </div>
+
+                <div class="row justify-content-between">
+                    <h6 class="col-5">COLOR</h6>
+                    <div class="col-5">{{prod.color}}</div>
+                </div>
+
+                <div class="row justify-content-between">
+                    <h6 class="col-5">QUANTITY</h6>
+                    <div class="col-5">{{prod.quantity}}</div>
+                </div>
+
+                <div class="row justify-content-between">                  
+                    <h6 class="col-5">PRICE</h6>
+                    <div class="col-5">{{prod.price}}</div>
+                </div>
+
+                <div class="row justify-content-between">
+                    <h6 class="col-5">RATING</h6>
+                    <div class="col-5">{{prod.rating}}</div>
+                </div> 
+
+                <div class="row justify-content-between">
+                    <h6 class="col-5">DESCRIPTION</h6>
+                    <div class="col-5"> {{prod.description}}</div>                  
+                </div>
+                
+              <div> <button (click)="AddC()" class="btn bt-cart">Add To Cart </button></div>             
+              <div> <button (click)="AddF()" class="btn bt-fav">Add To Favourite </button> </div>
+            </div>
+        </div>
+    </div>
+
+</section> -->
+<section> 
+<div class="container">
+
+    <br>
+    <br>
+    <div class="row justify-content-between">
+       
+        <div class="col-5">
+            <h4>{{prod.name}}</h4>
+            <br>
+            <div class="row justify-content-between">
+                <h6 class="col-5">VENDOR</h6>
+                <div class="col-5 text-color">{{prod.providerName}}</div>
+            </div>
+            <div class="row justify-content-between">
+                <h6 class="col-5">COLOR</h6>
+                <div class="col-5 text-color">{{prod.color}}</div>
+            </div>
+            <div class="row justify-content-between">
+                <h6 class="col-5">QUANTITY</h6>
+                <div class="col-5 text-color">{{prod.quantity}}</div>
+            </div>
+            <div class="row justify-content-between">                  
+                <h6 class="col-5">PRICE</h6>
+                <div class="col-5 text-color">{{prod.price}}</div>
+            </div>
+            <!-- <div class="row justify-content-between">
+                <h6 class="col-5">RATING</h6>
+                <div class="col-5">{{prod.rating}}</div>
+            </div>  -->
+            <div class="row justify-content-between">
+                <h6 class="col-5">DESCRIPTION</h6>
+                <div class="col-5 text-color"> {{prod.description}}</div>                  
+            </div>
+            <br>
+            <br>
+            <div> <button (click)="AddC()" class="btn bt-cart" >Add To Cart </button></div>     
+            <br>        
+            <div> <button (click)="AddF()" class="btn bt-fav">Add To Favourite </button> </div>
+        </div>
+        <div class="col-5"> 
+            <img src="https://localhost:50001{{prod.imgs[0]}}" alt="{{prod.name}}">
+            <div class="row d-flex">
+                <!-- <img src="https://localhost:50001{{prod.imgs[0]}}" class="col-3" width="50px" height="50px" alt="{{prod.name}}"> -->
+               
+            </div>
+        </div>
+    </div>
+</div>
+</section>

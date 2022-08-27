@@ -1,0 +1,40 @@
+﻿@using ELECTIENDA.ViewModel
+@model MemberShipEditViewModel 
+
+@{
+    Layout = "_LayoutAdminPanelComponents";
+} 
+
+<form method="post" asp-action="Edit" asp-controller="membership"> 
+  
+    <div>
+        <input asp-for="ID" type="hidden" hidden/>
+    </div>
+@*    <div>
+     <label asp-for="ProviderId"></label>
+     <input asp-for="ProviderId"/>
+ 
+ </div>*@
+    
+     
+    <div> 
+        <label asp-for="Role"></label> 
+        <input asp-for="Role" /> 
+    </div> 
+    <div> 
+        <label asp-for="DurartionTime"></label> 
+        <input asp-for="DurartionTime" /> 
+    </div> 
+    <div> 
+        <label asp-for="Price"></label> 
+        <input asp-for="Price" /> 
+    </div>
+<div>
+        <input type="submit" class="form-control" value="Edit" /> 
+    </div> 
+ 
+</form>
+
+
+
+

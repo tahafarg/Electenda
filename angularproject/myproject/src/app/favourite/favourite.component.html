@@ -1,0 +1,56 @@
+
+<section >
+  <div class="container ">
+      
+      <br>
+    <div class="row justify-content-between">
+          <div class="col-9">
+              <table class="table table-borderless align-middle ">
+                  <thead>
+                      <tr>
+                          <th>PRODUCT</th>
+                           <th></th>
+                          <th>PRICE</th>
+  
+                          <th></th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody class="table-group-divider ">
+  
+                      <tr class="cart" *ngFor="let item of favs">
+                          <td>                            
+                                  <div>
+                                      <p>{{item.name}}</p>                                  
+                                  </div>                           
+                          </td>
+                          <img src="https://localhost:50001{{item.img}}" width="" height="" alt=""> 
+                          <td>{{item.price}}</td>
+                         
+  
+                          <td><button class="btn  text-white" style="background-color:crimson ;"
+                                  (click)="Del(item.id)">DELETE</button></td>
+  
+                      </tr>
+  
+                  </tbody>
+              </table>
+          </div>
+  
+          <div class="col-2">
+              <br>
+              <br>
+              <div class="row">
+                  <div class="col-6">
+                      <h5>
+  
+                      </h5>
+                  </div>
+                  <div class="col-6">
+                      <h5></h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>

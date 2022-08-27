@@ -1,0 +1,48 @@
+﻿
+@model IPagedList<ShopViewModel>
+
+@{
+     ProviderViewModel userInfo = ViewBag.Provider  ;
+    Layout = "_LayoutProviderPanelComponents";
+}
+
+@*@{
+   
+}*@
+<br/>
+<br/>
+
+<a class="btn btn-primary" style="margin-left:-5rem !important;" asp-action ="Add" asp-controller="shop"  role="button">Add</a>
+
+
+  <table style="margin:2rem -5rem; text-align:center"class="table">
+  <thead style="text-align:center">
+    <tr>
+       <input asp-for="@userInfo.ID" type="hidden" hidden/>
+      <th style="color:darkblue" scope="col">Name</th>
+      <th style="color:brown"scope="col">Address</th>
+      <th style="color:dodgerblue" scope="col">Image</th>
+      <th style="color:midnightblue"scope="col">Statues</th>
+     
+      <th style="color:darkgoldenrod" scope="col">Edit</th>
+      <th style="color:red" scope="col">Delete</th>
+
+    </tr>
+  </thead>
+  <tbody style="text-align:center ; justify-content:center; align-items:center">
+    @foreach(ShopViewModel cat in Model)
+     { <tr>
+     @*<td hidden> @cat.Providerid= @userInfo.ID</td>*@
+     <td>@cat.Name</td>
+      <td>@cat.Address</td>
+      <td><img src="@cat.ImgSrc" width="15%" hight="15%" /></td>
+      <td>@cat.status </td>
+      @* 
+            <td><button class="btn btn-info"> <a asp-action="" asp-controller="services" asp-route-id="@cat.ID"> Details</a>  </button> </td> *@
+      
+      <td > <button style="background-color:darkgoldenrod"  class="btn btn"><a asp-action="Edit" asp-controller="shop" asp-route-id="@cat.ID"> Edit</a> </button></td> 
+      <td> <button style="background-color:darkred" class="btn btn"><a asp-action="Remove" asp-controller="shop" asp-route-id="@cat.ID"> delete</a> </button></td>
+    </tr>
+    }
+ </tbody>
+</table>

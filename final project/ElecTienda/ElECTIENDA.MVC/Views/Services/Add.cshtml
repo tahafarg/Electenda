@@ -1,0 +1,77 @@
+﻿@using ELECTIENDA.ViewModel;
+@model ServicesAddViewModel;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@{
+    Layout = "_LayoutProviderPanelComponents";
+}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="~/Content/lib/twitter-bootstrap/css/bootstrap.css"/>
+    </head>
+    <body>
+        <section></section>
+        <main>
+            <form style="margin-left:6rem; width:50rem !important; text-align:center ;width:50rem ; margin-left:10rem;margin-top:0.5rem;margin-bottom:2rem; text-align:center; background-color:cadetblue; border-radius:4rem 0 4rem 0rem; border:0.1rem solid blue; padding:3rem" method="post" asp-action="Add" asp-controller="Services">
+               <label asp-for="ProviderId" hidden></label>
+                <input asp-for="ProviderId" hidden/>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input name="Name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+   
+  </div>
+  <div class="mb-3">
+    <label asp-for="Description" class="form-label">Descrption</label>
+    <input asp-for="Description" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Price" class="form-label">Price</label>
+    <input asp-for="Price" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Start Date</label>
+    <input type="datetime-local" name="StartDate" class="form-control" id="exampleInputPassword1">
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">End Date</label>
+    <input type="datetime-local" name="EndDate" class="form-control" id="exampleInputPassword1">
+     
+  </div> 
+  <div class="form-group">
+      @*  <label asp-for="Images"></label>
+        <div class="custom-file">
+            <input asp-for="Images" class="custom-file-input" id="customFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>*@
+        @*<span asp-validation-for="CategoryId" class="text-danger"></span>*@
+
+       @* <label asp-for="CategoryId"></label>
+        <select asp-for="CategoryId" class="form-control">
+        </select>*@
+        @*<span asp-validation-for="CategoryId" class="text-danger"></span>*@
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="CategoryId"></label>
+        <select asp-for="CategoryId" asp-items="ViewBag.Categories">
+            <option selected>Choose a category</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+
+ <div> 
+        <label asp-for="IsActive"></label> 
+        <input asp-for="IsActive" /> 
+    </div> 
+
+     
+  <button type="submit" class="btn btn-primary">Add</button>
+
+</form>
+
+
+        </main>
+       <section></section>
+       </body>
+</html>

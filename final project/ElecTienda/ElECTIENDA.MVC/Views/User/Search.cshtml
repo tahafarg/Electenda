@@ -1,0 +1,62 @@
+﻿
+
+
+@model IPagedList<UserViewModel>
+
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+
+<div class="">
+ 
+ <br />
+<br />
+
+
+<table class="table">
+    
+    <thead> 
+          
+          <th>User Name</th>     
+         <th></th>
+    </thead>
+
+   <tbody>
+      
+@foreach(UserViewModel user in Model )
+{
+    <tr> 
+  <td>@user.FirstName  @user.LastName</td>
+   <td>  <button  class="btn btn-dark"> <a asp-action="Delete" asp-controller="User" asp-route-ID="@user.ID">Delete</a> </button> </td>
+   </tr>
+}
+
+ </tbody>
+</table>
+
+</div>
+  <div class="" style="margin-left:30%">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Search", new { pageIndex = page }),
+        new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+        })
+    </div>
+
+
+
+     <script>
+        $(document).ready(function() {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+
+
+
+
+
+

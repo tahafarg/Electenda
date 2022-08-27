@@ -1,0 +1,19 @@
+div{
+    margin: 5% auto;
+  
+}
+
+.card-style
+{
+    color: lightgray;
+    border: 1px gray solid;
+   /* transform: scaleX(0);*/
+  transition: 500ms;
+}
+
+.card-style:hover
+{
+    box-shadow: 5px 10px 8px 10px #888888;
+    transform: scaleX(1.05);
+
+}

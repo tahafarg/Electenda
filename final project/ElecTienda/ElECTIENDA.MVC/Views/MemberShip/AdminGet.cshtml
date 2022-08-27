@@ -1,0 +1,63 @@
+﻿@model IPagedList<MemberShipViewModel>
+
+
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+<br />
+<br />
+<a class="btn btn-primary" asp-action="Add" asp-controller="MemberShip" role="button">Add</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Price</th>
+
+
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (MemberShipViewModel s in Model)
+        {
+            <tr>
+                @*      <th scope="row">@s.ID</th>
+            *@
+                <td>@s.Role</td>
+                <td>@s.DurartionTime</td>
+                <td>@s.Price</td>
+                <td><button class="btn btn-danger"><a asp-action="Remove" asp-controller="MemberShip" asp-route-id="@s.ID"> Delete</a></button></td>
+                <td><button class="btn btn-dark"><a asp-action="Edit" asp-controller="MemberShip" asp-route-id="@s.ID"> Edit</a></button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<br />
+
+<div class="" style="margin-left:30%">
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Search", new { pageIndex = page }),
+    new X.PagedList.Web.Common.PagedListRenderOptions
+    {
+    DisplayItemSliceAndTotal = true,
+    ContainerDivClasses = new[] { "navigation" },
+    LiElementClasses = new[] { "page-item" },
+    PageClasses = new[] { "page-link" },
+    })
+</div>
+
+
+
+<script>
+    $(document).ready(function() {
+        $('ul.pagination > li.disabled > a').addClass('page-link');
+    });
+</script>
+
+
+

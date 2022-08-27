@@ -1,0 +1,34 @@
+
+<div class="row container"> 
+
+<div class="container border border-2 w-50 order-style"> 
+<div class="row justify-content-around" >
+   
+    <div class="col-3"> <p class="head" > Product </p></div>
+    <div class="col-3"> <p class="head" > Price </p> </div>
+    <div class="col-3"> <p class="head" > Quantity </p></div>
+    <div class="col-3"> <p class="head"> Sub Price </p></div>
+</div>
+<hr style="">
+
+<div *ngFor="let item of carts" class="row justify-content-around">
+    <div class="col-3 "> <p style="color:blue;"> {{item.name}} </p></div>
+    <div class="col-3"> <p style="color:blue;"> ${{item.price}}</p> </div>
+    <div class="col-3"> <p style="color:blue;"> {{item.quantity}}</p></div>
+    <div class="col-3"> <p style="color:blue;"> ${{item.price * item.quantity}} </p></div>
+
+</div>
+
+<hr style="">
+
+<br>
+
+<h6> Total Price = <span> {{sum}} </span> </h6>
+
+<br>
+</div>
+
+<div id="paypalBtn"></div>
+
+
+</div>

@@ -1,0 +1,11 @@
+
+
+ <img src="https://localhost:50001{{prod.imgs[0]}}" alt="{{prod.name}}">
+<div class="card-body ">
+ 
+  <p class="">{{prod.name}}</p>
+  <!-- <p class="card-text">{{prod.Rate}}</p> -->
+  <p class="">${{prod.price}}</p>
+  <p class="">{{prod.color}}</p>
+   <a [routerLink]="['/Product/details/',prod.id]"   class="btn btnStyle" >Details</a>
+</div>

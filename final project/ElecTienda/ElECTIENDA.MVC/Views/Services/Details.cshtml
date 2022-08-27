@@ -1,0 +1,26 @@
+﻿
+@model ServicesViewModel
+
+
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+<br/>
+<br/>
+
+<h4>Service Details</h4>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    
+    <p class="card-text"> @Model.Name</p>
+    <p class="card-text">@Model.Description</</p>
+    <p class="card-text">@Model.IsActive</p>
+    <p class="card-text">@Model.StartDate</p>
+    <p class="card-text">@Model.EndDate</p>
+    <p class="card-text">@Model.CategoryName</p>
+    <p class="card-text">@Model.ProdviderName</p>
+    
+  </div>
+</div>
+

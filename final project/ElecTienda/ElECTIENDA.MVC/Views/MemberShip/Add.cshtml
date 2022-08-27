@@ -1,0 +1,39 @@
+﻿@using ELECTIENDA.ViewModel;
+@model MemberShipEditViewModel;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="~/Content/lib/twitter-bootstrap/css/bootstrap.css"/>
+    </head>
+    <body>
+        <section></section>
+        <main>
+            <form method="post" asp-action="Add" asp-controller="MemberShip">
+  <div class="mb-3">
+      <label asp-for="Role" class="form-label">Type</label>
+    <input asp-for="Role" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label asp-for="DurartionTime" class="form-label">Duration</label>
+    <input asp-for="DurartionTime" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Price" class="form-label">Price</label>
+    <input asp-for="Price" class="form-control" id="exampleInputPassword1">
+  </div>
+     
+  <button type="submit" class="btn btn-primary">Add</button>
+
+</form>
+
+
+        </main>
+       <section></section>
+       </body>
+</html>
+

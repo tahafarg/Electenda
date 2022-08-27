@@ -1,0 +1,182 @@
+   
+   
+   * {
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    text-decoration: none;
+}
+
+
+
+.div-style {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+button:hover {
+
+    color: white !important;
+    background-color: black !important;
+}
+
+.secsmart img {
+    transition: 1s;
+}
+
+.secsmart:hover img {
+
+    transform: scale(1.1);
+    
+}
+
+
+
+.sec2smart {
+    top: 10%;
+    left: 10%;
+}
+
+
+.imgStyle {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+
+}
+
+.img1Style {
+    background-image: url()
+
+}
+/* 
+.img1Style:hover {
+    background-image: url(imgs/15.webp);
+}
+
+.img2Style {
+    background-image: url(imgs/9.webp);
+
+}
+
+.img2Style:hover {
+    background-image: url(imgs/15.webp);
+}
+
+.img3Style {
+    background-image: url(imgs/10.webp);
+
+}
+
+.img3Style:hover {
+    background-image: url(imgs/15.webp);
+}
+
+.img4Style {
+    background-image: url(imgs/11.webp);
+
+}
+
+.img4Style:hover {
+    background-image: url(imgs/15.webp);
+}
+*/
+
+.div1Style img {
+    transition: 1s;
+}
+
+.div1Style:hover img {
+
+    transform: scale(1.1);
+    
+}
+
+/*
+.img5Style {
+    background-image: url(imgs/1.jpg);
+
+}
+
+.img5Style:hover {
+    background-image: url(imgs/2.jpg);
+}
+
+.img6Style {
+    background-image: url(imgs/2.jpg);
+
+}
+
+.img6Style:hover {
+    background-image: url(imgs/1.jpg);
+}
+
+.img7Style {
+    background-image: url(imgs/17.webp);
+
+}
+
+.img7Style:hover {
+    background-image: url(imgs/2.jpg);
+}
+
+.img8Style {
+    background-image: url(imgs/22.webp);
+
+}
+
+.img8Style:hover {
+    background-image: url(imgs/2.jpg);
+}
+
+.img9Style {
+    background-image: url(imgs/21.webp);
+
+}
+
+.img9Style:hover {
+    background-image: url(imgs/2.jpg);
+}
+
+.img10Style {
+    background-image: url(imgs/23.webp);
+
+}
+
+.img10Style:hover {
+    background-image: url(imgs/2.jpg);
+}
+
+
+.cardStyle {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    line-height: 300px !important;
+
+
+   
+}
+*/
+
+.card1Style{
+    /* background-image: url(imgs/20.webp); */
+    background: url();
+
+}
+
+/*
+
+.card2Style{
+
+    background-image: url(imgs/19.webp);
+}
+ */

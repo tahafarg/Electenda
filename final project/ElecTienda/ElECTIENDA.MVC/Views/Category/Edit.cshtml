@@ -1,0 +1,34 @@
+﻿@using ELECTIENDA.ViewModel
+@model CategoryViewModel 
+ 
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+<form method="post" asp-action="Edit" asp-controller="Category"> 
+  
+    <div>
+        <input asp-for="ID" type="hidden" hidden/>
+    </div>
+    
+    
+    <div> 
+        <label asp-for="Name"></label> 
+        <input asp-for="Name" /> 
+    </div> 
+    <div> 
+        <label asp-for="Description"></label> 
+        <input asp-for="Description" /> 
+    </div> 
+    <div> 
+        <label asp-for="Imgsrc"></label> 
+        <input asp-for="Imgsrc" /> 
+    </div> 
+  <div> 
+        <input type="submit" class="form-control" value="Edit" /> 
+    </div> 
+ 
+</form>
+
+
+
+

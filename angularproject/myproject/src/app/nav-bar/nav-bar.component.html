@@ -1,0 +1,86 @@
+
+<nav class=" sticky-top shadow-lg d-flex   justify-content-end" style="background-color:  #1B5A9D ;"> 
+    <div class="container navbar  navbar-expand-lg  " style="height: 60px;"> 
+        <div class=""> 
+            <a class="navbar-brandfw-bold" routerLink=""><img src="assets/Logo/Background.png" class="" width="10%" 
+                    alt="..."></a> 
+        </div> 
+         
+        <div class=" "> 
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown" > 
+                <ul class="navbar-nav navbar-dark text-white "> 
+                    <li class="nav-item"> 
+                        <a class="nav-link" routerLink="">HOME</a> 
+                    </li> 
+ 
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            CATEGORIES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <!-- <li><a class="dropdown-item" href="category.html">category1</a></li> -->
+                            
+                            <!-- <app-cat-item *ngFor="let item of cats" [cat]="item"></app-cat-item> -->
+                            <li *ngFor="let item of cats" ><a  class="dropdown-item"  [routerLink]="['/products/list/'+item.id]">{{item.name}}</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" routerLink="/Services">SERVICES</a> 
+                    </li> 
+                    <li class="nav-item"> 
+                        <a class="nav-link" routerLink="/Aboutus">ABOUT</a> 
+                    </li> 
+                    <li class="nav-item"> 
+                        <a class="nav-link" routerLink="/Contact">CONTACT</a> 
+                    </li> 
+ 
+                    
+                </ul> 
+            </div> 
+        </div> 
+ 
+        <div class=""> 
+            <div class="collapse navbar-collapse" id="navbarNavDropdown justify-content-end"> 
+                <ul class="navbar-nav navbar-dark text-white "> 
+                  <li class="nav-item dropdown"> 
+                        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false" *ngIf="ISLOG"> 
+                            Welcome {{userName}} 
+                        </a> 
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                            <li><a class="dropdown-item" routerLink="/profile">profile</a></li>  
+                            <li> 
+                                <hr class="dropdown-divider"> 
+                            </li> 
+                            <li *ngIf="ISLOG"> 
+                                <a class="dropdown-item" routerLink="/Auth/SignOut">Log out</a> 
+                            </li> 
+                        </ul> 
+                    </li> 
+                    <li class="nav-item d-flex" *ngIf="!ISLOG"> 
+                         
+                        <a class="nav-link" style="margin-top: 0.1rem " routerLink="/Auth/SignUp"> SignUp </a> 
+                    </li> 
+                    <li class="nav-item d-flex"  *ngIf="!ISLOG"> 
+                         
+                        <a class="nav-link" style= "width: 2rem; font-size:1rem; margin-top: 0.1rem; display: flex; width: 4rem;"  routerLink="/Auth/SignIn">Log in</a></li> 
+                    <li>
+                        <a class="btn "  style="background-color: #858888;" routerLink="/cart"> <i class="fa-solid fa-cart-arrow-down" style="background-color:transparent ;"></i> </a>
+                    </li>
+                    <li>
+                        <a class="btn "  style="background-color: #858888;" routerLink="/Favs"> <i class="fa-brands fa-gratipay"></i> </a>
+                    </li>
+                    <li> 
+                        <!-- <form class="d-flex" role="search">  -->
+                            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 100px; margin-left: 2 rem;">  -->
+                            <a class="btn " style="background-color: #858888;" routerLink="/search">  <i class="fas fa-search "></i> </a> 
+                          <!-- </form>  -->
+                    </li>                             
+                </ul> 
+            </div> 
+        </div> 
+    </div> 
+</nav>

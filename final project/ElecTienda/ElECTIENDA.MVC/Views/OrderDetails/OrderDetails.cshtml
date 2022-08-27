@@ -1,0 +1,29 @@
+﻿
+@model PaginingViewModel<List<OrderDetailsViewModel>>
+ 
+ 
+<h5>hey</h5> 
+ 
+@foreach (var orderDetails in Model.Data) 
+{ 
+    <h1>@orderDetails.ID</h1> 
+@*    <h2>@orderDetails.user</h2> 
+*@    if (@orderDetails.ProductName != null) 
+    { 
+        <h3>@orderDetails.ProductName</h3> 
+    } 
+    else 
+    { 
+        <h4>no product has chosen</h4> 
+    } 
+    if (orderDetails.Service != null) 
+    { 
+        <h3>@orderDetails.Service</h3> 
+ 
+    } 
+    else 
+    { 
+        <h4>no service has chosen</h4> 
+    } 
+ 
+}

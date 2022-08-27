@@ -1,0 +1,46 @@
+﻿
+@model IPagedList<ShopViewModel>
+
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+<br/>
+<br/>
+
+
+
+
+  <table class="table">
+  <thead>
+
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">address</th>
+      <th scope="col">imgsrc</th>
+      <th scope="col">Statues</th>
+      <th scope="col">Accept</th>
+      <th scope="col">Reject</th>
+      
+      @*<th scope="col">Delete</th>*@
+
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(ShopViewModel cat in Model)
+     { <tr>
+      <input asp-for="@cat.Providerid" hidden/>
+     <td>@cat.Name</td>
+      <td>@cat.Address</td>
+      <td><img src="@cat.ImgSrc" width="25%" hight="25%" /></td>
+      <td>@cat.status </td>
+      @* 
+            <td><button class="btn btn-info"> <a asp-action="" asp-controller="services" asp-route-id="@cat.ID"> Details</a>  </button> </td> *@
+      <td><button class="btn btn-success"> <a asp-action="ShopAccepted" asp-controller="shop" asp-route-id="@cat.ID"> Accept</a>  </button> </td> 
+      <td> <button class="btn btn-danger"><a asp-action="ShopRejected" asp-controller="shop" asp-route-id="@cat.ID"> Reject</a> </button></td> 
+      
+     @* <td> <button class="btn btn-primary"><a asp-action="Remove" asp-controller="shop" asp-route-id="@cat.ID"> delete</a> </button></td>*@
+    </tr>
+    }
+ </tbody>
+</table>

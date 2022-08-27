@@ -1,0 +1,58 @@
+﻿
+@model ProductEditViewModel 
+@{
+    Layout = "_LayoutProviderPanelComponents";
+} 
+
+<form style="width:50rem ; margin-left:10rem;margin-top:0.5rem;margin-bottom:2rem; text-align:center; background-color:cadetblue; border-radius:4rem 0 4rem 0rem; border:0.1rem solid blue; padding:3rem" method="post" asp-action="Edit" asp-controller="Product" enctype="multipart/form-data"> 
+ 
+    <input asp-for="ID" hidden/>
+    <div> 
+        <label asp-for="ProviderID" hidden></label> 
+        <input asp-for="ProviderID" hidden/> 
+    </div> 
+    <div > 
+        <label asp-for="CategoryID"></label> 
+        <select asp-for="CategoryID" asp-items="ViewBag.Categories"> 
+            <option selected>Choose a Category</option> 
+        </select> 
+        <span asp-validation-for="CategoryID" class="text-danger"></span> 
+    </div> 
+    <div> 
+        <label asp-for="Name"></label> 
+        <input  style="margin-left:2rem;" asp-for="Name" /> 
+    </div> 
+    <div> 
+        <label asp-for="Description"></label> 
+        <input asp-for="Description" /> 
+    </div> 
+    <div> 
+        <label asp-for="Price"></label> 
+        <input  style="margin-left:2.7rem;" asp-for="Price" /> 
+    </div> 
+    <div> 
+        <label asp-for="isActive"></label> 
+        <input asp-for="isActive" /> 
+    </div> 
+    <div> 
+        <label asp-for="Quantity"></label> 
+        <input   style="margin-left:1.5rem;" asp-for="Quantity" /> 
+    </div> 
+    <div> 
+        <label asp-for="Color"></label> 
+        <input  style="margin-left:3rem;" asp-for="Color" /> 
+    </div>
+
+    <div> 
+        <label asp-for="Images"></label> 
+        <input  asp-for="Images" />
+ <span asp-validation-for="Images" style="color:red"></span>
+    </div> 
+    <div> 
+        <input type="submit" class="btn btn-primary" value="Edit" /> 
+    </div> 
+ 
+</form>
+
+
+

@@ -1,0 +1,30 @@
+div{
+    margin-top: 5%;
+}
+
+button{
+    width: 200px;
+    border-radius: 10%;
+    background-color: brown;
+    color: white;
+}
+
+.head
+{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+#paypalBtn
+{
+    width: 200px;
+    border-radius: 10px;
+    
+}
+
+.order-style
+{
+    box-shadow: 5px 10px 8px 10px #888888;
+    border-radius: 10px;
+}

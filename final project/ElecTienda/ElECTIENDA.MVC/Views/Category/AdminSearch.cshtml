@@ -1,0 +1,74 @@
+﻿
+
+@model IPagedList<CategoryViewModel>
+
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+<a class="btn btn-primary" asp-action ="Add" asp-controller="Category" role="button">Add</a>
+<br/>
+<br/>
+  <table class="table">
+  <thead>
+    <tr>
+@*      <th scope="col">#</th>
+*@      <th scope="col">Name</th>
+      <th scope="col">Descrption</th>
+
+     @* <th scope="col">Product Name</th>
+       <th scope="col">Services Name</th>*@
+       <th scope="col"></th>
+       <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(CategoryViewModel cat in Model)
+     { <tr>
+@*      <th scope="row">@cat.ID</th>
+*@      <td>@cat.Name</td>
+      <td>@cat.Description</td>
+      <td> <button class="btn btn-warning"> <a asp-action="Edit" asp-controller="category" asp-route-id="@cat.ID"> Edit</a> </button></td>
+      <td><button class="btn btn-dark">  <a asp-action="Remove" asp-controller="category" asp-route-id="@cat.ID"> Delete</a> </button> </td> 
+      <td> <button  class="btn btn-success" > <a asp-action="CategoryAccepted" asp-controller="category" asp-route-id="@cat.ID"> Accept</a></button></td> 
+       <td> <button class="btn btn-danger" ><a asp-action="CategoryRejected" asp-controller="category" asp-route-id="@cat.ID"> Reject</a></button></td> 
+    @*  @foreach(string str in cat.productname)
+                        {
+                            <td> @str</td>
+                        }
+    
+
+      @foreach(string str in cat.ServciesName)
+                        {
+                            <td> @str</td>
+                        }
+*@
+    </tr>
+    }
+ </tbody>
+</table>
+
+<br /> 
+<br /> 
+
+
+ <div class="" style="margin-left:30%">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Search", new { pageIndex = page }),
+        new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+        })
+    </div>
+
+
+
+     <script>
+        $(document).ready(function() {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+
+      

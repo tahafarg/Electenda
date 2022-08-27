@@ -1,0 +1,11 @@
+﻿
+@using ELECTIENDA.ViewModel
+
+@model PaginingViewModel<List<UserViewModel>>
+
+
+@foreach(var u in Model.Data)
+{
+<h6>@u.FirstName</h6>
+
+}

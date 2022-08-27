@@ -1,0 +1,43 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+
+    margin-top: 2%;
+   /* line-height: 50px;*/
+}
+
+
+button{
+    
+    width: 150px;
+    border-radius: 10px;
+    color: white;
+}
+
+.bt-cart
+{
+    background-color:blue
+}
+
+.bt-fav
+{
+    background-color: cadetblue;
+}
+
+div
+{
+    color: gray;
+}
+
+.text-color
+{
+    color:gray;
+    font-size: 20px;
+    font-style: italic;
+
+}

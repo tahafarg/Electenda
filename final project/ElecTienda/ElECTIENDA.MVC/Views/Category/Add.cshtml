@@ -1,0 +1,39 @@
+﻿@using ELECTIENDA.ViewModel;
+@model CategoryViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@{
+    Layout = "_LayoutAdminPanelComponents";
+}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="~/Content/lib/twitter-bootstrap/css/bootstrap.css"/>
+    </head>
+    <body>
+        <section></section>
+        <main>
+            <form method="post" asp-action="Add" asp-controller="Category">
+  @*<label asp-for="p"></label>*@
+                <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input name="Name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+   
+  </div>
+  <div class="mb-3">
+    <label asp-for="Description" class="form-label">Descrption</label>
+    <input asp-for="Description" class="form-control" id="exampleInputPassword1">
+  </div>
+    @*<div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">imge source</label>
+    <input type="text" name="ImgSrc" class="form-control" id="exampleInputPassword1">
+  </div>*@
+  <button type="submit" class="btn btn-primary">Add</button>
+
+</form>
+
+
+        </main>
+       <section></section>
+       </body>
+</html>

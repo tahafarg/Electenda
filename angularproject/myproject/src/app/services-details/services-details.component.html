@@ -1,0 +1,14 @@
+
+
+<a routerLink="/Services"><i class="fas fa-arrow-left" id="button-back"></i></a> 
+<div class="profile-body"> 
+    <div class="photo"> 
+        <img src="" 
+            class="image--cover"> 
+    </div> 
+    <div class="profile"> 
+
+        <h1 class="username">{{data.providerName}}</h1> 
+        <h2 class="profession"> Vendor </h2> 
+        <h3 class="locationname"><i class="fas fa-map-marker-alt"></i> {{data.providerAddress}} </h3> 
+        <p class="descricao" *ngFor="let item of data.shops">{{item }}<br></p>

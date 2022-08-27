@@ -1,0 +1,282 @@
+<div class="container div-style">
+    <div class="row ">
+        <div class="col-4 position-relative secsmart">
+            <div class="overflow-hidden">
+                <a class="" routerLink="">
+                    <img src="assets/imgs/3.jpg" alt="">
+                </a>
+            </div>
+            <div class="position-absolute sec2smart">
+                <h4 class="">
+                    <span class="">SMARTPHONES</span>
+                    <i class="fa-solid fa-chevron-right top-50 end-50"></i>
+                    <p class="fs-6">from $900</p>
+                </h4>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="row mb-4">
+                <div class="col-6 position-relative secsmart">
+                    <div class="overflow-hidden">
+                        <a routerLink="" class="">
+                            <img src="assets/imgs/4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="position-absolute sec2smart">
+                        <h4 class="">
+                            <span class="">TABLETS</span>
+                            <i class="fa-solid fa-chevron-right top-50 end-50"></i>
+                            <p class="fs-6">from $900</p>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-6 position-relative secsmart">
+                    <div class="overflow-hidden">
+                        <a routerLink="" class="">
+                            <img src="assets/imgs/5.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="position-absolute sec2smart">
+                        <h4 class="">
+                            <span class="">LAPTOPS</span>
+                            <i class="fa-solid fa-chevron-right top-50 end-50"></i>
+                            <p class="fs-6">from $900</p>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 position-relative secsmart">
+                    <div class="overflow-hidden">
+                        <a routerLink="" class="">
+                            <img src="assets/imgs/6.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="position-absolute sec2smart">
+                        <h4 class="">
+                            <span class="">HEADPHONES</span>
+                            <i class="fa-solid fa-chevron-right top-50 end-50"></i>
+                            <p class="fs-6">from $900</p>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-6 position-relative secsmart">
+                    <div class="overflow-hidden">
+                        <a routerLink="" class="">
+                            <img src="assets/imgs/7.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="position-absolute sec2smart">
+                        <h4 class="">
+                            <span class="">SMART TV</span>
+                            <i class="fa-solid fa-chevron-right top-50 end-50"></i>
+                            <p class="fs-6">from $900</p>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container div-style">
+    <h4 class="text-center mb-4">Brands</h4>
+    <div class="row">
+        <!-- <div class="col-3 " *ngFor="let brand of brands">
+            <a routerLink=""> <button class="btn transperent border border-2 border-dark w-100">
+                    <h5>{{brand.name}</h5>
+                </button></a>
+        </div> -->
+       
+        <div class="col-3">
+            <a routerLink=""> <button class="btn transperent border border-2 border-dark "style="width:80%">
+                    <h5> SUMSUNG</h5>
+                </button></a>
+        </div>
+        <div class="col-3">
+            <a routerLink=""> <button class="btn transperent border border-2 border-dark "style="width:80%">
+                    <h5> TOSHIPA</h5>
+                </button></a>
+        </div>
+
+        <div class="col-3">
+            <a routerLink=""> <button class="btn transperent border border-2 border-dark "style="width:80%">
+                    <h5> OPPO </h5>
+                </button></a>
+        </div>
+
+        <div class="col-3">
+            <a routerLink=""> <button class="btn transperent border border-2 border-dark w-100" style="width:80%">
+                    <h5>SONY</h5>
+                </button></a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container div-style">
+    <h4 class="">FLASH DEALS</h4>
+    <div class="progress mt-4 mb-4" style="height: 3px;">
+        <div class="progress-bar bg-danger" role="progressbar" style="width: 18%;" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+    <div class="row">
+        <div class="card col-3 border-0" *ngFor="let flash of flashDeals">
+            <img src="https://localhost:50001{{flash.imgs[0]}}" class="card-img-top" width="200px" height="200px" alt="{{flash.name}}">                        <div class="card-body lh-lg">
+                <div class="card-body lh-lg">
+                <p class="">{{flash.name}} </p>
+                <p>{{flash.categoryName}}</p>
+                <p>
+                    <i class="fa-solid fa-star text-secondary "></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                </p>
+                <p><span class="text-decoration-line-through text-secondary">${{flash.price +50}} </span><span
+                        class="text-danger">${{flash.price}}</span></p>
+                <p>
+                    <i class="fa-solid fa-circle text-danger"></i>
+                    <i class="fa-solid fa-circle text-dark"></i>
+                    <i class="fa-solid fa-circle text-warning"></i>
+                    <i class="fa-solid fa-circle text-secondary"></i>
+                </p>
+                <a [routerLink]="['/Product/details/',flash.id]" > <button class="btn btn-transperent border-dark " style="width:150px;height: 30px;">Select Option</button></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container div-style">
+    <div class="row justify-content-between" >
+        <div class="card col-5 border-0 div1Style justify-content-end">
+            <a routerLink="" class="overflow-hidden"> <img
+                    src="https://cdn.shopify.com/s/files/1/0071/4755/2866/files/sub-banner-2.jpg?v=1635771970"
+                    class="card-img-top" alt="..."> </a>
+        </div>
+        <div class="card col-5 border-0 div1Style  ">
+            <a routerLink="" class="overflow-hidden"> <img
+                    src="https://cdn.shopify.com/s/files/1/0071/4755/2866/files/sub-banner-2.jpg?v=1635771970"
+                    class="card-img-top" alt="..."> </a>
+        </div>
+    </div>
+
+</div>
+
+<div class="container  div-style">
+    <h4 class="">NEW IN</h4>
+    <div class="progress mt-4 mb-4" style="height: 3px;">
+        <div class="progress-bar" role="progressbar" style="width: 18%;" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+    <div class="row  justify-content-between">
+        <!-- <div class="col-4 cardStyle card1Style " >
+            <button class="btn transperent border border-2 border-dark p-2 ">SHOP NOW</button>
+        </div> -->
+        
+         <img src="assets/imgs/19.webp" alt="" class="col-3">
+    
+        <div class="card col-2 border-0" *ngFor="let newi of newIn">
+            <!-- <a routerLink="" class="imgStyle img5Style "></a> -->
+            <img src="https://localhost:50001{{newi.imgs[0]}}" class="card-img-top" alt="{{newi.name}}">
+            <div class="card-body lh-lg">
+                <p class="">{{newi.name}} </p>
+                <p>{{newi.categoryName}}</p>
+                <p>
+                    <i class="fa-solid fa-star text-secondary "></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                </p>
+                <p><span class="text-decoration-line-through text-secondary">{{newi.price+100}}</span><span
+                        class="text-danger">{{newi.price}}</span></p>
+                <p>
+                    <i class="fa-solid fa-circle text-danger"></i>
+                    <i class="fa-solid fa-circle text-dark"></i>
+                    <i class="fa-solid fa-circle text-warning"></i>
+                    <i class="fa-solid fa-circle text-secondary"></i>
+                </p>
+                <a [routerLink]="['/Product/details/',newi.id]" > <button class="btn btn-transperent border-dark " style="width:150px;height: 30px;">Select Option</button></a>
+            </div>
+        </div>
+    </div>
+    <div>
+
+        <div class="container  div-style">
+            <h4 class="">COLLECTIONS</h4>
+            <div class="progress mt-4 mb-4" style="height: 3px;">
+                <div class="progress-bar" role="progressbar" style="width: 18%;" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+            </div>
+            <div class="row  justify-content-between">
+                <!-- <div class="col-4 cardStyle card2Style">
+                    <button class="btn transperent border border-2 border-dark p-2 ">SHOP NOW</button>
+                </div> -->
+                <img src="assets/imgs/20.webp" alt="" class="col-3">
+                <div class="card col-2 border-0" *ngFor="let collec of collections">
+                    <!-- <a routerLink="" class="imgStyle img8Style "></a> -->
+                    <img src="https://localhost:50001{{collec.imgs[0]}}" class="card-img-top" alt="{{collec.name}}">
+                    <div class="card-body lh-lg">
+                        <p class="">{{collec.name}}</p>
+                        <p>{{collec.categoryName}}</p>
+                        <p>
+                            <i class="fa-solid fa-star text-secondary "></i>
+                            <i class="fa-solid fa-star text-secondary"></i>
+                            <i class="fa-solid fa-star text-secondary"></i>
+                            <i class="fa-solid fa-star text-secondary"></i>
+                            <i class="fa-solid fa-star text-secondary"></i>
+                        </p>
+                        <p><span class="text-decoration-line-through text-secondary">{{collec.price+100}}</span><span
+                                class="text-danger">{{collec.price}</span></p>
+                        <p>
+                            <i class="fa-solid fa-circle text-danger"></i>
+                            <i class="fa-solid fa-circle text-dark"></i>
+                            <i class="fa-solid fa-circle text-warning"></i>
+                            <i class="fa-solid fa-circle text-secondary"></i>
+                        </p>
+                        <a [routerLink]="['/Product/details/',collec.id]" > <button class="btn btn-transperent border-dark " style="width:150px;height: 30px;">Select Option</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container div-style">
+                <h4 class="">RECOMMENDED FOR YOU</h4>
+                <div class="row">
+                    <div class="card col-3 border-0" *ngFor="let rec of recomended">
+                        <img src="https://localhost:50001{{rec.imgs[0]}}" class="card-img-top" alt="{{rec.name}}">                        <div class="card-body lh-lg">
+                            <p class="">{{rec.name}} </p>
+                            <p>{{rec.categoryName}}</p>
+                            <p>
+                                <i class="fa-solid fa-star text-secondary "></i>
+                                <i class="fa-solid fa-star text-secondary"></i>
+                                <i class="fa-solid fa-star text-secondary"></i>
+                                <i class="fa-solid fa-star text-secondary"></i>
+                                <i class="fa-solid fa-star text-secondary"></i>
+                            </p>
+                            <p><span class="text-decoration-line-through text-secondary">{{rec.price+100}}</span><span
+                                    class="text-danger">{{rec.price}}</span></p>
+                            <p>
+                                <i class="fa-solid fa-circle text-danger"></i>
+                                <i class="fa-solid fa-circle text-dark"></i>
+                                <i class="fa-solid fa-circle text-warning"></i>
+                                <i class="fa-solid fa-circle text-secondary"></i>
+                            </p>
+                            <a [routerLink]="['/Product/details/',rec.id]" > <button class="btn btn-transperent border-dark " style="width:150px;height: 30px;">Select Option</button></a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="container ">
+                    <div class="row ">
+                        <app-card *ngFor="let item of recomended2" [prod]="item" class="card col-4 border-0">
+                         
+                        </app-card>
+                    </div>
+                    </div>
+                </div>
+            </div>

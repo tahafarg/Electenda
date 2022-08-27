@@ -1,0 +1,58 @@
+
+<div class="container style"> 
+<br>
+
+<!-- 
+<br>
+<br> -->
+
+<form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 100px; margin-left: 2 rem;" #text>
+        <button class="btn " type="submit" style="background-color: #464949;" (click)="Search(text.value)">  <i class="fas fa-search pt-2 pb-2" ></i> </button>
+      </form>
+  
+
+
+
+<!-- <div>
+        <div class="card col-2 border-0" *ngFor="let item of data">
+            <a routerLink="" class="imgStyle img5Style "></a>
+            <img src="https://localhost:50001{{item.imgs[0]}}" class="card-img-top" alt="{{item.name}}">
+            <div class="card-body lh-lg">
+                <p class="">{{item.name}} </p>
+                <p>{{item.categoryName}}</p>
+                <p>
+                    <i class="fa-solid fa-star text-secondary "></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                    <i class="fa-solid fa-star text-secondary"></i>
+                </p>
+                <p><span class="text-decoration-line-through text-secondary">{{item.price+100}</span><span
+                        class="text-danger">{{item.price}}</span></p>
+                <p>
+                    <i class="fa-solid fa-circle text-danger"></i>
+                    <i class="fa-solid fa-circle text-dark"></i>
+                    <i class="fa-solid fa-circle text-warning"></i>
+                    <i class="fa-solid fa-circle text-secondary"></i>
+                </p>
+                <a [routerLink]="['/Product/details/',item.id]" > <button class="btn btn-transperent border-dark " style="width:150px;height: 30px;">Select Option</button></a>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="row container">
+        <app-card *ngFor="let item of data" [prod]="item" class="card col-4">
+         
+        </app-card>
+    </div>
+
+    <!-- <div class="d-flex justify-content-center" id="pagination">
+        <pagination-controls previousLabel="Prev" nextLabel="Next"
+            (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+    </div>  -->
+
+
+</div>
